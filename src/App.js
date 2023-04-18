@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import About from './components/About';
+import Coin from './components/Coin/Coin';
+import Header from './components/Header';
+import { useGlobalContext } from './contexts/Store';
+import { Route, Routes } from 'react-router-dom';
+import Newsletter from './components/News/Newsletter';
+import Homepage from "./components/Homepage"
 
-function App() {
+const App = () => {
+  const [searchWord, setSearchWord] = useState("Bitcoin");
+  const { coins } = useGlobalContext();
+
+  const filteredCoins = coins.filter((coin) => {
+    return coin.name.toLowerCase().includes(searchWord.toLowerCase());
+  });
+
+  const setSearchValueHandler = (x) => {
+    setSearchWord(x);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <>
+      <Header setSearchValueHandler={setSearchValueHandler} />
+
+      <Routes>
+        <Route path="/" exact element={<Homepage />} />
+        <Route path="/coins" element={<Coin filteredCoins={filteredCoins} />} />
+        <Route element={<About />} />
+        <Route path="/news" element={<Newsletter />} />
+      </Routes>
+    </>
   );
 }
 
