@@ -7,6 +7,10 @@ import { useGlobalContext } from './contexts/Store';
 import { Route, Routes } from 'react-router-dom';
 import Newsletter from './components/News/Newsletter';
 import Homepage from "./components/Homepage"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 const App = () => {
   const [searchWord, setSearchWord] = useState("Bitcoin");

@@ -7,7 +7,11 @@ const CoinItem = (props) => {
 
     return (
 
-        <Card className='shadow my-3 position-relative px-5 py-5 rounded-5'>
+        <Card className='shadow my-3 position-relative px-5 py-5 rounded-5'
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-duration="1000">
+
             <Badge pill bg="dark" className='position-absolute top-0 start-25 translate-middle'>
                 {rank}
             </Badge>
@@ -46,7 +50,7 @@ const CoinItem = (props) => {
 
 
             </Card.Body>
-        </Card>
+        </Card >
 
     )
 }
