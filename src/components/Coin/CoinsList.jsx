@@ -22,15 +22,13 @@ const CoinsList = () => {
             })
     }, []);
 
-    if (error) return `Error: ${error.message}`;
-    if (!coins) return (
+    if (error) return (
         <div className='my-5 d-flex align-items-center justify-content-center'>
-            <Spinner className="my-5" animation="border" role="status" />
+            <h2 className='text-danger'>Error: {error.message}</h2>
         </div>);
 
     return (
-        <div>
-
+        <>
             {
                 loading ? <div className='my-5 d-flex align-items-center justify-content-center text-center'>
                     <Spinner className="my-5 d-flex text-center" animation="border" role="status" />
@@ -47,8 +45,8 @@ const CoinsList = () => {
                                     <th>Price</th>
                                 </tr>
                             </thead>
+                            
                             <tbody className=' rounded-4  mx-3 py-3 '>
-
                                 {coins?.map((coin) => {
                                     return (
                                         <>
@@ -66,7 +64,7 @@ const CoinsList = () => {
                         </Table>
                     </>
             }
-        </div>
+        </>
     )
 }
 

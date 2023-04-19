@@ -1,14 +1,16 @@
 import './App.css';
 import React, { useState } from 'react';
-import About from './components/About';
-import Coin from './components/Coin/Coin';
-import Header from './components/Header';
-import { useGlobalContext } from './contexts/Store';
 import { Route, Routes } from 'react-router-dom';
-import Newsletter from './components/News/Newsletter';
+import { useGlobalContext } from './contexts/Store';
 import Homepage from "./components/Homepage"
-import AOS from 'aos';
+import About from './components/About';
+import Header from './components/Header';
+import Footer from "./components/Footer";
+import Coin from './components/Coin/Coin';
+import Newsletter from './components/News/Newsletter';
+
 import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 AOS.init();
 
@@ -25,7 +27,6 @@ const App = () => {
   }
 
   return (
-
     <>
       <Header setSearchValueHandler={setSearchValueHandler} />
 
@@ -35,6 +36,8 @@ const App = () => {
         <Route element={<About />} />
         <Route path="/news" element={<Newsletter />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }

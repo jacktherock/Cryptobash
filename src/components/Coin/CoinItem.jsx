@@ -6,7 +6,6 @@ const CoinItem = (props) => {
     let { rank, exp, name, symbol, icon, price, volume, priceChange1h, priceChange1d, priceChange1w } = props;
 
     return (
-
         <Card className='shadow my-3 position-relative px-5 py-5 rounded-5'
             data-aos="zoom-in"
             data-aos-offset="200"
@@ -50,8 +49,7 @@ const CoinItem = (props) => {
 
 
             </Card.Body>
-        </Card >
-
+        </Card>
     )
 }
 

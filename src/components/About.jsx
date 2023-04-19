@@ -1,7 +1,8 @@
-import { Modal } from 'react-bootstrap';
 import React from 'react';
+import { Modal } from 'react-bootstrap';
 
 function About(props) {
+
     return (
         <Modal
             {...props}
@@ -22,9 +23,6 @@ function About(props) {
                     Most of the data is fetched from the API, but the icons are stored locally.
                     Main purpose of this app is to learn React and PWA.
                     POints of interest:
-                    <ul>
-
-                    </ul>
                 </p>
             </Modal.Body>
             <Modal.Footer>

@@ -1,21 +1,19 @@
 import React from 'react';
-import About from './About';
-import { Container, Nav, Navbar, Offcanvas, Form, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import { Container, Nav, Navbar, Offcanvas, Form, Button } from 'react-bootstrap'
 import "../assets/style.css"
+import About from './About';
 
 const Header = ({ setSearchValueHandler }) => {
     const [modalShow, setModalShow] = React.useState(false);
 
-
-
     return (
         <>
             {['md'].map((expand) => (
-                <Navbar key={expand} bg="dark" variant="dark" sticky="top" expand={expand} className="navbar py-3">
+                <Navbar key={expand} variant="dark" sticky="top" expand={expand} className="navbar py-3" style={{ backgroundColor: "#002a38" }}>
                     <Container fluid>
                         <Link to="/">
-                            <Button variant="dark" className='rounded-pill ms-5 px-3 fs-5'>CryptoBash</Button>
+                            <Button variant="dark" className='rounded-pill ms-5 px-3 fs-5' style={{ backgroundColor: "#134D60" }}>CryptoBash</Button>
                         </Link>
 
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />

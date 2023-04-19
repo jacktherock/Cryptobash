@@ -1,12 +1,16 @@
 import React from 'react'
 import { Row, Col, Container, Spinner } from 'react-bootstrap'
-import NewsItem from './NewsItem'
 import { useGlobalContext } from '../../contexts/Store';
-import NoImageAvailable from '../../assets/NoImageAvailable.jpg'
+import NewsItem from './NewsItem'
 
 const Newsletter = () => {
 
-    const { articles, loading } = useGlobalContext();
+    const { articles, loading, error } = useGlobalContext();
+
+    if (error) return (
+        <div className='my-5 d-flex align-items-center justify-content-center'>
+            <h2 className='text-danger'>Error: {error.message}</h2>
+        </div>);
 
     return (
         <Container>
@@ -18,17 +22,18 @@ const Newsletter = () => {
 
                 {articles?.map((article) => {
                     return (<>
-                        <Col sm={4}>
+                        <Col xs={12} md={6} lg={4}>
                             <NewsItem
                                 key={article.id}
                                 title={article.title ? article.title : ""}
-                                imgURL={article.imgURL ? article.imgURL : NoImageAvailable}
+                                imgURL={article.imgURL}
                                 shareURL={article.shareURL}
                                 source={article.source} />
                         </Col>
                     </>)
                 }
                 )}
+
             </Row>
         </Container>
     )
