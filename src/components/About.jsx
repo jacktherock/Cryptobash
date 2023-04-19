@@ -18,15 +18,26 @@ function About(props) {
             <Modal.Body>
                 <h4>What is CryptoBash?</h4>
                 <p>
-                    CryptoBash app uses the CoinGecko API to display the top 100 cryptocurrencies.
-                    Advantage of this app is that it is a PWA, so you can install it on your phone and use it as a native app.
-                    Most of the data is fetched from the API, but the icons are stored locally.
-                    Main purpose of this app is to learn React and PWA.
-                    POints of interest:
+                    Welcome to CryptoBash, your go-to destination for up-to-date information on the world of cryptocurrencies!
                 </p>
+                <p>
+                    Our React JS-based web application with a user-friendly and intuitive platform that ranks top crypto coins based on their market capitalization and provides trending news about cryptocurrencies from around the world.
+                </p>
+                <p>
+                    Some key features of CryptoBash:
+                </p>
+                <ol>
+                    <li>Real-time ranking system of top cryptocurrencies based on market capitalization</li>
+                    <li>Detailed breakdown of performance for each cryptocurrency in the ranking</li>
+                    <li>Trending news section with updates on the latest developments in the cryptocurrency world</li>
+                    <li>Curated news sources to ensure accuracy and relevance of information</li>
+                    <li>User-friendly and intuitive interface for easy navigation</li>
+                    <li>Comprehensive and up-to-date information for both seasoned investors and newcomers</li>
+                    <li>Constantly updated to reflect changes in the market and new developments in the industry.</li>
+                </ol>
             </Modal.Body>
             <Modal.Footer>
-                <p>Copyright @2023</p>
+                <p>Made with ❤️ | Copyright @2023 </p>
             </Modal.Footer>
         </Modal>
     );

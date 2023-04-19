@@ -5,9 +5,8 @@ import axios from 'axios';
 const CoinsList = () => {
 
     const [coins, setCoins] = useState([])
-    const [error, setError] = React.useState(null);
+    const [error, setError] = useState(false);
     const [loading, setLoading] = useState(true)
-
 
     useEffect(() => {
         axios
@@ -45,7 +44,7 @@ const CoinsList = () => {
                                     <th>Price</th>
                                 </tr>
                             </thead>
-                            
+
                             <tbody className=' rounded-4  mx-3 py-3 '>
                                 {coins?.map((coin) => {
                                     return (

@@ -17,7 +17,6 @@ AOS.init();
 const App = () => {
   const [searchWord, setSearchWord] = useState("Bitcoin");
   const { coins } = useGlobalContext();
-
   const filteredCoins = coins.filter((coin) => {
     return coin.name.toLowerCase().includes(searchWord.toLowerCase());
   });
