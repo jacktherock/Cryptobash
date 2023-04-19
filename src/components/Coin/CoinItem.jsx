@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Badge } from 'react-bootstrap';
+import { Card, Badge, Row, Col } from 'react-bootstrap';
 
 const CoinItem = (props) => {
 
@@ -28,23 +28,37 @@ const CoinItem = (props) => {
                     <img src={icon} className="mx-5" style={{ width: "50px" }} alt="" />
                 </Card.Text>
                 <Card.Text className='d-flex'>
-                    <span className='card w-50 mx-2 px-3 py-3 rounded-5'>
-                        Price: <span className='fs-5 fw-bold' style={{ color: "#0096FF" }}>{price}</span>
-                    </span>
-                    <span className='card w-50 mx-2 px-3 py-3 rounded-5'>
-                        Volume: <span className='fs-5 fw-bold' style={{ color: "#5800FF" }}>{volume}</span>
-                    </span>
+                    <Row className="">
+                        <Col xs={12}  md={6} lg={6}>
+                            <span className='card mx-2 px-3 py-3 rounded-5 text-wrap'>
+                                Price: <span className='fs-5 fw-bold' style={{ color: "#0096FF" }}>{price}</span>
+                            </span>
+                        </Col>
+                        <Col xs={12}  md={6} lg={6}>
+                            <span className='card mx-2 px-3 py-3 rounded-5 text-wrap'>
+                                Volume: <span className='fs-5 fw-bold' style={{ color: "#5800FF" }}>{volume}</span>
+                            </span>
+                        </Col>
+                    </Row>
                 </Card.Text>
                 <Card.Text className='d-flex'>
-                    <span className='card w-50 mx-2 px-3 py-3 rounded-5'>
-                        Price Change per Hour: <span className='fs-5 fw-bold' style={{ color: "#9145B6" }}>{priceChange1h}</span>
-                    </span>
-                    <span className='card w-50 mx-2 px-3 py-3 rounded-5'>
-                        Price Change per Day: <span className='fs-5 fw-bold' style={{ color: "#B958A5" }}>{priceChange1d}</span>
-                    </span>
-                    <span className='card w-50 mx-2 px-3 py-3 rounded-5'>
-                        Price Change per Week: <span className='fs-5 fw-bold ' style={{ color: "#FF5677" }}>{priceChange1w}</span>
-                    </span>
+                    <Row className=''>
+                        <Col xs={12} md={4} lg={4}>
+                            <span className='card mx-2 px-3 py-3 rounded-5'>
+                                Price Change per Hour: <span className='fs-5 fw-bold' style={{ color: "#9145B6" }}>{priceChange1h}</span>
+                            </span>
+                        </Col>
+                        <Col xs={12} md={4} lg={4}>
+                            <span className='card mx-2 px-3 py-3 rounded-5'>
+                                Price Change per Day: <span className='fs-5 fw-bold' style={{ color: "#B958A5" }}>{priceChange1d}</span>
+                            </span>
+                        </Col>
+                        <Col xs={12} md={4} lg={4}>
+                            <span className='card mx-2 px-3 py-3 rounded-5'>
+                                Price Change per Week: <span className='fs-5 fw-bold ' style={{ color: "#FF5677" }}>{priceChange1w}</span>
+                            </span>
+                        </Col>
+                    </Row>
                 </Card.Text>
 
 

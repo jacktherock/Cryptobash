@@ -21,10 +21,10 @@ const Coin = ({ filteredCoins }) => {
     return (
         <Container>
             <Row>
-                <Col xs={12} md={10} lg={6}>
+                <Col xs={12} md={12} lg={6}>
                     <CoinsList />
                 </Col>
-                <Col xs={12} md={10} lg={6}>
+                <Col xs={12} md={12} lg={6}>
                     {loading && <div className='my-5 d-flex align-items-center justify-content-center text-center'>
                         <Spinner className="my-5 d-flex text-center" animation="border" role="status" />
                     </div>}
