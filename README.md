@@ -5,6 +5,7 @@ CryptoBash is a web application designed to provide users with real-time informa
 Developed using React JS, JSX, CSS, and Bootstrap, the app features an interactive UI with a user-friendly design.
 
 - API Used : https://documenter.getpostman.com/view/5734027/RzZ6Hzr3
+- Live : https://cryptobash.netlify.app/
 
 ## Steps:
 
