@@ -80,3 +80,8 @@ li:hover ~ li p {
   background-color: #002a38;
   line-height: 1.8;
 }
+
+/*Navbar Offcanvas*/
+.offcanvas-size {
+  --bs-offcanvas-width: min(65vw, 500px) !important;
+}

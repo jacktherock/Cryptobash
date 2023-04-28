@@ -22,7 +22,7 @@ const Newsletter = () => {
 
                 {articles?.map((article) => {
                     return (<>
-                        <Col xs={12} md={6} lg={4}>
+                        <Col xs={12} md={6} lg={4} key={article.id}>
                             <NewsItem
                                 key={article.id}
                                 title={article.title ? article.title : ""}

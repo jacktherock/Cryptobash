@@ -25,9 +25,13 @@ const App = () => {
     setSearchWord(x);
   }
 
+  const data = {
+    title: "CryptoBash",
+  }
+
   return (
     <>
-      <Header setSearchValueHandler={setSearchValueHandler} />
+      <Header setSearchValueHandler={setSearchValueHandler} data={data} />
 
       <Routes>
         <Route path="/" exact element={<Homepage />} />

@@ -4,7 +4,7 @@ import { Container, Nav, Navbar, Offcanvas, Form, Button } from 'react-bootstrap
 import "../assets/style.css"
 import About from './About';
 
-const Header = ({ setSearchValueHandler }) => {
+const Header = ({ setSearchValueHandler, data }) => {
     const [modalShow, setModalShow] = React.useState(false);
 
     return (
@@ -13,7 +13,7 @@ const Header = ({ setSearchValueHandler }) => {
                 <Navbar key={expand} variant="dark" sticky="top" expand={expand} className="navbar py-3" style={{ backgroundColor: "#002a38" }}>
                     <Container fluid>
                         <Link to="/">
-                            <Button variant="dark" className='rounded-pill ms-5 px-3 fs-5' style={{ backgroundColor: "#134D60" }}>CryptoBash</Button>
+                            <Button variant="dark" className='rounded-pill ms-5 px-3 fs-5' style={{ backgroundColor: "#134D60" }}>{data.title}</Button>
                         </Link>
 
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -21,6 +21,7 @@ const Header = ({ setSearchValueHandler }) => {
                             id={`offcanvasNavbar-expand-${expand}`}
                             aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                             placement="start"
+                            className="offcanvas-size"
                         >
                             <Offcanvas.Header closeButton>
                                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
@@ -30,14 +31,14 @@ const Header = ({ setSearchValueHandler }) => {
                             <Offcanvas.Body>
 
                                 <Nav className="navbar-nav my-auto mx-auto">
-                                    <Nav.Link className="nav-item mx-3 py-2">
-                                        <Link to="/coins" className="nav-link">Crypto</Link>
+                                    <Nav.Link as={Link} to="/coins" className="nav-item mx-3 py-2">
+                                        Crypto
                                     </Nav.Link>
-                                    <Nav.Link className="nav-item mx-3 py-2">
-                                        <Link to="/news" className="nav-link">News</Link>
+                                    <Nav.Link as={Link} to="/news" className="nav-item mx-3 py-2">
+                                        News
                                     </Nav.Link>
                                     <Nav.Link className="nav-item mx-3 py-2" onClick={() => setModalShow(true)}>
-                                        <span className="nav-link"> About</span>
+                                        About
                                     </Nav.Link>
                                 </Nav>
 

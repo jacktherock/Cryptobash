@@ -33,7 +33,7 @@ const CoinsList = () => {
                     <Spinner className="my-5 d-flex text-center" animation="border" role="status" />
                 </div> :
                     <>
-                        <h2 className='text-center my-3 py-3 shadow text-underline border rounded-pill'>Top 10 Coins</h2>
+                        <h2 className='text-center my-3 py-3'><u className="py-2 px-4 rounded-5 shadow">Top 10 Coins</u></h2>
                         <Table className='text-center' hover responsive>
                             <thead className='' style={{ backgroundColor: "#f2f2f2" }}>
                                 <tr className='shadow rounded-4'>
@@ -48,15 +48,13 @@ const CoinsList = () => {
                             <tbody className=' rounded-4  mx-3 py-3 '>
                                 {coins?.map((coin) => {
                                     return (
-                                        <>
-                                            <tr className="shadow rounded-4 ">
-                                                <td>{coin.rank}</td>
-                                                <td><img src={coin.icon} alt="" style={{ width: "40px" }} /></td>
-                                                <td><a className='text-decoration-none' href={coin.websiteUrl}>{coin.name}</a></td>
-                                                <td>{coin.symbol}</td>
-                                                <td>{coin.price}</td>
-                                            </tr>
-                                        </>
+                                        <tr key={coin.id} className="shadow rounded-4">
+                                            <td>{coin.rank}</td>
+                                            <td><img src={coin.icon} alt="" style={{ width: "40px" }} /></td>
+                                            <td><a className='text-decoration-none' href={coin.websiteUrl}>{coin.name}</a></td>
+                                            <td>{coin.symbol}</td>
+                                            <td>{coin.price}</td>
+                                        </tr>
                                     )
                                 })}
                             </tbody>

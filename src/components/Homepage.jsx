@@ -17,7 +17,7 @@ const Homepage = () => {
                     </Col>
 
                     <Col sm={6} className="d-flex justify-content-center align-items-center">
-                        <img src={home} className="w-100" alt="" />
+                        <img src={home} className=" shadow rounded-5 img-fluid" alt="" />
                     </Col>
                 </Row>
             </Container>

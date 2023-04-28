@@ -19,14 +19,11 @@ function About(props) {
                 <h4>What is CryptoBash?</h4>
                 <p>
                     Welcome to CryptoBash, your go-to destination for up-to-date information on the world of cryptocurrencies!
-                </p>
-                <p>
+                    <br />
                     Developed using React JS, JSX, CSS, and Bootstrap, the app features an interactive UI with a user-friendly design.
-                </p>
-                <p>
+                    <br />
                     Our React JS-based web application with a user-friendly and intuitive platform that ranks top crypto coins based on their market capitalization and provides trending news about cryptocurrencies from around the world.
-                </p>
-                <p>
+                    <br />
                     Some key features of CryptoBash:
                 </p>
                 <ol>
@@ -40,7 +37,7 @@ function About(props) {
                 </ol>
             </Modal.Body>
             <Modal.Footer>
-                <p>Made with ❤️ | Copyright @2023 </p>
+                Made with ❤️ | Copyright @2023
             </Modal.Footer>
         </Modal>
     );
