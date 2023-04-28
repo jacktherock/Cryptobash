@@ -20,8 +20,9 @@ const globalReducer = (state, action) => {
             return { ...state, articles: action.data }
         case 'SET_ERROR':
             return { ...state, error: action.data }
+        default:
+            return state;
     }
-    return state
 }
 
 const MyStore = ({ children }) => {
